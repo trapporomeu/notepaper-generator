@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notepaper Generator - Dark Paper</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="shortcut icon" href="images/favicon-notepaper.png" type="image/x-icon">
+</head>
+<body>
+<div id="gate">
+  <div class="choicesdiv center">
+    <p><b>Acesso restrito</b></p>
+    <p>Digite a senha para entrar.</p>
+    <input type="password" id="gatepass" inputmode="numeric" autocomplete="off" placeholder="Senha (números)"><br><br>
+    <button id="gatebtn" type="button">Entrar</button>
+    <p id="gatemsg" class="red"></p>
+  </div>
+</div>
+
+<div id="builder" class="hide">
+
+  <div class="choicesdiv noborder" id="CustomerLink"></div>
+
+  <!-- 1. App -->
+  <div class="choicesdiv" id="appBuy"><b>Qual app você usa?</b><br><br>
+    <label><input type="radio" name="appBuy" value="GoodNotes" checked> GoodNotes (use o <span class="red">Safari</span>, não outro navegador)</label><br>
+    <label><input type="radio" name="appBuy" value="Notability"> Notability</label><br>
+    <label><input type="radio" name="appBuy" value="CollaNote"> CollaNote</label><br>
+    <label><input type="radio" name="appBuy" value="Penly"> Penly para Android</label><br>
+    <label><input type="radio" name="appBuy" value="Xodo"> Xodo para Android</label><br>
+    <label><input type="radio" name="appBuy" value="NoteshelfAnd"> Noteshelf para Android</label><br>
+    <label><input type="radio" name="appBuy" value="NoteshelfiPad"> Noteshelf para iPad</label><br>
+    <br>
+  </div>
+
+  <!-- 2. Botão Custom / Presets -->
+  <div class="choicesdiv" id="buttondiv"><br>
+    <button id="custombutton" type="button">Mostrar seção Custom</button><br><br>
+  </div>
+
+  <!-- 3. Presets -->
+  <div id="presets">
+    <div class="choicesdiv" id="presetoptions"><b>Presets (textura lisa — use a seção Custom para outras texturas)</b><br>
+      <div id="presetList"></div>
+    </div>
+  </div>
+
+  <!-- 4. Custom -->
+  <div id="custom" class="hide">
+    <div class="choicesdiv" id="TypePlanner"><b>Opções custom</b><br><br>
+
+      <div id="pagecolor">
+        <b>Cor da página:</b><br>
+        <label><input type="radio" name="PlannerColor" value="customcolor" id="customcolor"> Custom: <strong>#</strong><input type="text" id="customhex">
+          <span class="bar" id="customhexsq"></span></label><br><br>
+      </div>
+
+      <div id="pageqty">
+        <b>Quantidade de páginas:</b><br>
+        <label>Cada modelo se repete <input type="number" id="pageqtyinput" min="1" max="5" value="1"> vez(es) (1 a 5)</label>
+        <span id="qtywarn" class="red hide">Máximo de 5 páginas por modelo.</span><br><br>
+      </div>
+
+      <div id="textures"><b>Textura</b><br>
+        <div id="texList"></div><br>
+      </div>
+
+      <div id="customimage" class="hide"><b>Imagem própria</b><br>
+        <input type="file" id="file" accept="image/*"><br>
+        <img id="imgPreview" class="hide" width="100" height="100" alt=""><br>
+      </div>
+
+      <div id="opacitysection" class="hide">
+        <b>Transparência da cor</b><br>Obs.: quanto maior a transparência, mais clara fica a cor.<br><br>
+        Porcentagem: <input type="range" id="customopacity" min="20" max="80" value="35"><br>
+        Valor atual: <span id="customopacitynum">35</span>
+      </div><br>
+    </div>
+
+    <div class="choicesdiv hide" id="sizePlanner"><b>Dispositivo</b><br>
+      <label><input type="radio" name="sizePlanner" value="default" checked> Padrão</label><br>
+      <label><input type="radio" name="sizePlanner" value="A4"> A4</label><br>
+      <label><input type="radio" name="sizePlanner" value="legal"> Legal</label><br>
+      <label><input type="radio" name="sizePlanner" value="letter"> Letter</label><br>
+    </div>
+  </div>
+
+  <!-- 5. Código -->
+  <div class="choicesdiv" id="result"></div>
+
+  <!-- 6. Gerar -->
+  <div class="choicesdiv" id="genbox">
+    <a id="resultlink" class="plainlink"><div id="resultlinkdiv">Clique abaixo para gerar o notepaper:</div></a><br>
+    <div id="resultlinkmessagediv"></div>
+    <div id="resultlinkenddiv"></div>
+    <button id="genbutton" type="button">Gerar notepaper</button><br><br>
+  </div>
+
+  <!-- 7. Repick -->
+  <div class="choicesdiv hide" id="refreshbutton"><br>
+    <button id="repick" type="button">Escolher opções novamente</button><br><br>
+  </div>
+
+  <!-- 8. Instruções -->
+  <div id="allvideos"></div>
+</div>
+<script src="config.js"></script>
+<script src="font.js"></script>
+<script src="thumbs.js"></script>
+<script src="templates.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

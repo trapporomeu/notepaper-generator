@@ -1,0 +1,39 @@
+@font-face{font-family:'Fluffy Hand';src:url('../fonts/FluffyHand-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+body{margin:0;padding:20px 0 60px;background:#fff;color:#222;font:700 8pt/1.5 'Fluffy Hand',system-ui,sans-serif}
+input,button,select,textarea{font-family:inherit}
+
+/* caixas: medidas do site base */
+.choicesdiv{
+  border:3px solid #f1d6dd;
+  width:800px;max-width:80%;
+  margin:0 auto 15px;
+  background:#fff;
+  border-radius:5px;
+  padding-left:10px;padding-top:5px;
+}
+.choicesdiv.noborder{border:none}
+.hide{display:none}
+.red{color:red;font-weight:bold}
+
+input[type=radio],input[type=checkbox]{display:inline;width:13px;height:13px}
+input#customhex{width:90px;padding:2px 4px}
+input#customopacity{width:120px}
+label{cursor:pointer}
+button{background:#eee;border:1px solid #bbb;border-radius:4px;padding:6px 14px;cursor:pointer;font:inherit}
+
+.bar{display:inline-block;width:200px;height:20px;vertical-align:middle;border:1px solid #ccc}
+.tex{display:inline-block;width:200px;height:60px;vertical-align:middle;border:1px solid #ccc}
+
+.plainlink{color:#4a4a4a;text-decoration:none}
+.plainlink.ready{color:blue;text-decoration:underline}
+#result{font-size:8pt;word-break:break-all}
+#resultlinkenddiv{word-break:break-all;font-size:8pt}
+
+.inst ol{margin:8px 0 0;padding-left:22px}
+.inst{padding-bottom:10px}
+
+@media(max-width:600px){.choicesdiv{max-width:94%}}
+
+#gate{padding-top:12vh}
+.center{text-align:center}
+#gatepass{padding:8px 10px;font-size:8pt;letter-spacing:4px;text-align:center;border:1px solid #bbb;border-radius:4px}
