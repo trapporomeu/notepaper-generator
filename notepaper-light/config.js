@@ -1,7 +1,7 @@
 const CONFIG = {
   title: 'LIGHT NOTEPAPER',
   backendUrl: '',   // deixe vazio para gerar no navegador; ou ex.: 'https://seu-dominio.com/api/notepaper'
-  passHash: '445c22295dbfa09a5a1c44144032bf8e48a8353309d01c589e16a591a2d47214',   // SHA-256 da senha numerica (a senha em si nao fica no codigo)
+  passHash: '9260f889a03c3de5a806b802afdcca308513328a90c44988955d8dc13dd93504',   // SHA-256 da senha numerica (a senha em si nao fica no codigo)
   thumbBorder: '#58595B',   // borda das miniaturas do índice (igual no dark e no light)
   thumbInk: '#939598',      // linhas de papel nas miniaturas (igual no dark e no light)
   thumbStruct: '#4D4D4F',   // divisórias/margens nas miniaturas (igual no dark e no light)
